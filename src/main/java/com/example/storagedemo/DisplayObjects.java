@@ -29,6 +29,6 @@ public class DisplayObjects {
   }
 
   public Stream<Blob> stream() {
-    return StreamSupport.stream(storage.list(bucketName).iterateAll().spliterator(), false);
+    return storage.list(bucketName).streamAll();
   }
 }
